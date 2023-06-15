@@ -1277,8 +1277,8 @@ dp_ct_est(struct xfi *xf,
           key->daddr[0] = tdat->pi.pmhh[j];
           xkey->daddr[0] = tdat->pi.pmhh[j];
 
-          adat->nat_act.rip[0] = tdat->pi.pmhh[i];
-          axdat->nat_act.xip[0] = tdat->pi.pmhh[i];
+          adat->nat_act.rip[0] = tdat->pi.pmhh[j];
+          axdat->nat_act.xip[0] = tdat->pi.pmhh[j];
 
           LL_DBG_PRINTK("[CTRK] ASSOC 0x%x->0x%x",key->saddr[0], key->daddr[0]);
           bpf_map_update_elem(&ct_map, key, adat, BPF_ANY);
